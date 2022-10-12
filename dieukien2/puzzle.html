@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        img{
+            width: 200px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    <img id="img1" src="./img/t0.jpg" onclick="changeImg1()">
+    <br>
+    <img id="img2" src="./img/d1.jpg" onclick="changeImg2()">
+    <br>
+    <img id="img3" src="./img/c2.jpg" onclick="changeImg3()">
+
+
+</div>
+<script>
+    let a = 0;
+    let b = 1;
+    let c = 2;
+    let img1= document.getElementById('img1');
+    let img2 = document.getElementById('img2');
+    let img3 = document.getElementById('img3');
+    function changeImg1() {
+        let random = Math.floor(Math.random() * 3);
+        // console.log(random)
+        document.getElementById('img1').src = "./img/t" + random + ".jpg"
+        a = random;
+        check();
+    }
+
+    function changeImg2() {
+        let random = Math.floor(Math.random() * 3);
+        document.getElementById('img2').src = "./img/d" + random + ".jpg"
+        b = random;
+        check();
+    }
+
+    function changeImg3() {
+        let random = Math.floor(Math.random() * 3);
+        document.getElementById('img3').src = "./img/c" + random + ".jpg"
+        c = random;
+        check()
+    }
+    function check(){
+        if (a == 0 && b == 0 && c == 0) {
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+        }else if (a==1 && b ==1 && c==1){
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+        }
+        else if (a==2 && b ==2 && c==2){
+            img1.style.boxShadow = 'red 4px 4px 9px';
+            img2.style.boxShadow = 'red 4px 4px 9px';
+            img3.style.boxShadow = 'red 4px 4px 9px';
+        }else {
+            img1.style.boxShadow = 'white 4px 4px 9px';
+            img2.style.boxShadow = 'white 4px 4px 9px';
+            img3.style.boxShadow = 'white 4px 4px 9px';
+        }
+    }
+</script>
+</body>
+</html>
